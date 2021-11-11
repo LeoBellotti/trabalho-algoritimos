@@ -254,20 +254,171 @@ int main()
 	
 	case 3:
 		 {
-		 	
+		 printf("\nDigite a nota da sua A1: ");
+		 scanf("%f", &NotaA1o);
+		 	if(NotaA1o > 0)
+		 	{
+		 		printf("Digite a nota da sua A2: ");
+		 		scanf("%f", &NotaA2o);
+		 		
+		 		if(NotaA2o >= 5)
+		 		{
+		 		 Media3o = (NotaA1o * 0.4) + (NotaA2o * 0.6);
+				
+						if (Media3o >= 6)	
+		 				{
+		 				
+		 				   printf("\n---------------------------------------");
+		 				   printf("\nParabens voce passou na materia online!");
+		 				   printf("\nSua media final foi de..: %.1f", Media3o);
+		 				   printf("\n---------------------------------------\n");
+		 			}
+	 	   			 	   else
+	 	   			 	   {
+	 	   			 	   	printf("\n--------------------------------------------------");
+	 	   			 	   	printf("\nInfelizmente voce nao passsou");
+	 	   			 	   	printf("\nSua media final foi de..: %.1f", Media3o);
+	 	   			 	   	printf("\nFaça a prova A3 para substituir sua nota da A2");
+	 	   			 	   	printf("\n--------------------------------------------------\n");
+	 	   			 	   	printf("Caso ja tenha feito A3 digite 1, caso nao digite 2: ");
+		 	  				scanf("%d", &CasoA3);
 		 }
-			 
+		 
+   		  	  							if (CasoA3 == 1)
+			  							{
+			  
+			   	 						  printf("\nDige sua nota da A3: ");
+			   	 						  scanf("%f", &NotaA3o);
+								  			   if (NotaA3o > NotaA2o)
+								  			   {
+								  			   
+		 	   	 						  	   	  Media3o = (NotaA1o * 0.4) + (NotaA3o * 0.6);
+
+		 	  	 						 		 if (Media3o >= 6)
+		 	  	 								 {	printf("\n-------------------------\n");
+										 	  	 	printf("Parabens voce passou!\n");
+										 		 	printf("Sua media final foi de..: %.1f", Media3o);
+										 		 	printf("\n-------------------------\n\n");
+										 		 	system("PAUSE");
+					 		 	        			system("cls");
+										 		 	main();
+												   }
+													else
+								 				 {
+									  		  	    printf("\n---------------------------------\n");
+									  		 	 	printf("Infelizmente voce nao passou.");
+									  		 	 	printf("\nSua media final foi de..: %.1f", Media3o);
+									  		 	 	printf("\n---------------------------------\n");
+									  		 	 	system("PAUSE");
+									  		 	 	 system("cls");
+									  		 	 	main();
+								 		 			}
+								 		 		}
+							 		 			 else
+							 		 			 {
+							 		 			 
+					 		 			 	        printf("\n---------------------------------\n");
+					 		 			 	        printf("Sua nota da A3 foi menor que a da A2!");
+									  		 	 	printf("\nCom isso infelizmente voce nao passou.");
+									  		 	 	printf("\nSua media final foi de..: %.1f", Media3o);
+									  		 	 	printf("\n---------------------------------\n");
+					 		 			            system("PAUSE");
+								  		 	 	    system("cls");
+									  		 	 	main();
+							 		 		}
+								 
+							}
+											   else if (CasoA3 == 2)
+										   {
+											   		printf("\n-----------------\n");
+											   		printf(" Faca a prova A3!");
+											   		printf("\n-----------------\n");
+											   		system("PAUSE");
+											   		 system("cls");
+											   		main();
+									 	   			 	   	
+									 	   			 	   }
+		 
+                 }
+ 	 	          else
+ 	 	          {
+ 	 	          	printf("\n---------------------------------------");
+ 	 	          	printf("\nSua nota da A2 foi menor que 5!");
+ 	 	          	printf("\nCom isso voce precisa fazer a prova A3");
+ 	 	          	printf("\nCaso nao faça a A3 estara reprovado!");
+ 	 	          	printf("\n---------------------------------------");
+ 	 	          	printf("\nCaso ja tenha feito A3 digite 1, caso nao digite 2: ");
+			        scanf("%d", &CasoA3);
+		 }
+		 
+   		  	  							if (CasoA3 == 1)
+			  							{
+			  
+			   	 						 printf("\nDige sua nota da A3: ");
+			   	 						 scanf("%f", &NotaA3o);
+		 
+		 	   	 						 Media3o = (NotaA1o * 0.4) + (NotaA3o * 0.6);
+
+		 	  	 						 		 if (Media3o >= 6)
+		 	  	 								 {	printf("\n-------------------------\n");
+										 	  	 	printf("Parabens voce passou!\n");
+										 		 	printf("Sua media final foi de..: %.1f", Media3o);
+										 		 	printf("\n-------------------------\n\n");
+										 		 	system("PAUSE");
+					 		 	        			system("cls");
+										 		 	main();
+												   }
+													else
+								 				 {
+									  		  	    printf("\n---------------------------------\n");
+									  		 	 	printf("Infelizmente voce nao passou.");
+									  		 	 	printf("\nSua media final foi de..: %.1f", Media3o);
+									  		 	 	printf("\n---------------------------------\n");
+									  		 	 	system("PAUSE");
+									  		 	 	 system("cls");
+									  		 	 	main();
+								 		 			}
+								 }
+		  					           else if (CasoA3 == 2)
+										   {
+											   		printf("\n-----------------\n");
+											   		printf(" Faca a prova A3!");
+											   		printf("\n-----------------\n");
+											   		system("PAUSE");
+											   		 system("cls");
+											   		main();
+									 	   			 	   	
+									 	   			 	   }
+ 	 	          }
+  	         else
+  	         {
+  	         	printf("\nDigite a Nota da sua A2: ");
+  	         	scanf("%f", &NotaA2o);
+  	         	
+  	         	Media3o = (NotaA1o * 0.4) + (NotaA2o * 0.6);
+ 	         	
+ 	         	printf("\n------------------------------------------------------");
+ 	         	printf("\nSua nota da A1 foi 0 !");
+ 	         	printf("\nCom isso voce esta reprovado");
+ 	         	printf("\nLembrando que a nota da A3 nao interfere na nota da A1");
+ 	         	printf("\n-------------------------------------------------------\n");
+ 	         	system("PAUSE");
+		 		system("cls");
+ 		 	    main();
+  	         }
+  	     }
+  	    
+	
+
 	case 4:
 		{
 			printf("\n-------------------------------------\n");
 			printf("Espero que tenha funcionado!\n");
 			printf("Obrigado por utilizar o pragama.\n");
-			printf("\n-------------------------------------\n");
+			printf("-------------------------------------\n");
 			exit(0);
 		}
-		
-
-
+ }
 }
-}
+
 
